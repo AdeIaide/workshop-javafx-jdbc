@@ -23,6 +23,11 @@
                     <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
                   </items>
                 </Menu>
+                <Menu mnemonicParsing="false" text="Options">
+                  <items>
+                    <MenuItem fx:id="menuItemMainMenu" mnemonicParsing="false" onAction="#onMenuItemMainMenuAction" text="Clear" />
+                  </items>
+                </Menu>
               </menus>
             </MenuBar>
          </children>

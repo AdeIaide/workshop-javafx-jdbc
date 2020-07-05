@@ -30,6 +30,9 @@ public class MainViewController implements Initializable{
 	private MenuItem menuItemAbout;
 
 	@FXML
+	private MenuItem menuItemMainMenu;
+
+	@FXML
 	public void onMenuItemSellerAction() {
 		System.out.println("onMenuItemSellerAction");
 	}
@@ -42,6 +45,16 @@ public class MainViewController implements Initializable{
 	@FXML
 	public void onMenuItemAboutAction() {
 		loadView("/gui/About.fxml");
+	}
+
+	@FXML
+	public void onMenuItemMainMenuAction() {
+		Scene mainScene = Main.getMainScene();
+		VBox mainVBox = (VBox)((ScrollPane)mainScene.getRoot()).getContent();
+
+		Node mainMenu = mainVBox.getChildren().get(0);
+		mainVBox.getChildren().clear();
+		mainVBox.getChildren().add(mainMenu);
 	}
 
 	@Override
